@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.navbar {
+    width: 250px;
+    background-color: #030303;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar ul li {
+    margin-bottom: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    background-color: #161616;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+/* Home Section */
+#home h1 {
+    color: #ffffff; /* Azul para destacar o título */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#home {
+    margin-top: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    justify-content: center;
+    background-color: #5c5b5b;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-top: 40px;
+    margin-right: 200px;
+}
+
+#about h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 40px;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Portfolio Section */
+#portfolio h2 {
+    color: #ffffff;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;    
+}
+
+.portfolio-item {
+    background-color: #5c5b5b;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(40% - 20px);
+    transition: transform 0.3s ease;
+    margin-left: 30px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.portfolio-item h3 {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Contact Section */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 350px;
+    margin-top: 40px;
+    margin-right: 200px;
+}
+#contact h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 100px;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #004494;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .portfolio-gallery {
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        width: 100%;
+    }
+}

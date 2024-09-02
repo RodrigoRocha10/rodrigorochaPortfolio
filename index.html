@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link para Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#" onclick="showSection('home')"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#" onclick="showSection('about')"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#" onclick="showSection('portfolio')"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                <li><a href="#" onclick="showSection('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <section id="home" class="active">
+                <div class="hero">
+                    <h1>Bem-vindo ao Meu Portfólio</h1>
+                    <p>Desenvolvedor Web | Designer | Criador</p>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2>Sobre Mim</h2>
+                <div class="about-content">
+                    <img src="images/profile.jpg" alt="Perfil">
+                    <div class="about-text">
+                        <p>Sou um desenvolvedor apaixonado por criar soluções criativas e eficientes. Tenho experiência em várias linguagens de programação e adoro aprender novas tecnologias.</p>
+                        <p>Além do desenvolvimento, também tenho habilidades em design gráfico, o que me permite criar interfaces bonitas e funcionais.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h2>Portfolio</h2>
+                <div class="portfolio-gallery">
+                    <div class="portfolio-item">
+                        <img src="images/portfolio1.jpg" alt="Projeto 1">
+                        <div class="overlay">
+                            <h3>Projeto 1</h3>
+                            <p>Descrição do Projeto 1</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="images/portfolio2.jpg" alt="Projeto 2">
+                        <div class="overlay">
+                            <h3>Projeto 2</h3>
+                            <p>Descrição do Projeto 2</p>
+                        </div>
+                    </div>
+                    <!-- Adicione mais itens conforme necessário -->
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contacto</h2>
+                <p>Para entrar em contato, envie um email para <a href="mailto:email@exemplo.com">email@exemplo.com</a> ou preencha o formulário abaixo.</p>
+                <form>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
